@@ -6,7 +6,7 @@
 
 Цель сервиса — управлять **долгосрочным средним результатом** на стороне клиента, приводя его к заданному значению **rtp**. На языке теории вероятности это можно сформулировать так:
 
-$$E[\text{transformed\_x}] = \text{rtp}$$
+$$E[\text{transformed\\_x}] = \text{rtp}$$
 
 Выразим формулу для расчета RTP.
 
@@ -22,20 +22,25 @@ $$E[\text{transformed\_x}] = \text{rtp}$$
 Математическое ожидание **E** вычисляется как сумма произведений значений всех возможных исходов на их вероятности.
 
 В применении этой формулы к нашему случаю:
-$$E[\text{transformed\_x}] = (\text{значение\_при\_выигрыше} \times P(\text{выигрыш})) + (\text{значение\_при\_проигрыше} \times P(\text{проигрыш}))$$
+
+$$E[\text{transformed\\_x}] = (\text{значение\\_при\\_выигрыше} \bullet P(\text{выигрыш})) + (\text{значение\\_при\\_проигрыше} \bullet P(\text{проигрыш}))$$
 
 Подставляя соответствующие значения и вероятности, получаем:
-$$E[\text{transformed\_x}] = (x \times P(\text{multiplier} > x)) + (0 \times P(\text{multiplier} \leq x))$$
+
+$$E[\text{transformed\\_x}] = (x \bullet P(\text{multiplier} > x)) + (0 \bullet P(\text{multiplier} \leq x))$$
 
 Упростим:
-$$E[\text{transformed\_x}] = x \times P(\text{multiplier} > x)$$
+
+$$E[\text{transformed\\_x}] = x \bullet P(\text{multiplier} > x)$$
 
 ### Шаг 3: Вывод уравнения
 
-Поскольку ($E[\text{transformed\_x}] = \text{rtp}$), получаем:
-$$\text{rtp} = x \times P(\text{multiplier} > x)$$
+Поскольку ($E[\text{transformed\\_x}] = \text{rtp}$), получаем:
+
+$$\text{rtp} = x \bullet P(\text{multiplier} > x)$$
 
 Соответственно, итоговая формула для RTP выглядит следующим образом:
+
 $$P(\text{multiplier} > x) = \frac{\text{rtp}}{x}$$
 
 ## Пример запуска
